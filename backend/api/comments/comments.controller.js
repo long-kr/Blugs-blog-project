@@ -21,7 +21,6 @@ function list(req, res, next) {
         res.json({ data: comments_json_1.default });
     });
 }
-;
 module.exports = {
     list: list,
 };

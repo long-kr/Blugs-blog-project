@@ -1,5 +1,5 @@
-import { Request, Response, NextFunction } from 'express';
-import posts from '../utils/posts.json'
+import { NextFunction, Request, Response } from 'express';
+import posts from '../utils/posts.json';
 /**
  * Get function for list blogs
  */
@@ -18,7 +18,7 @@ async function create(req: Request, res: Response, next: NextFunction) {
     };
     posts.push(newPost);
     console.log(newPost);
-    res.status(201).json({ data: newPost})
+    res.status(201).json({ data: newPost })
 };
 
 module.exports = {
