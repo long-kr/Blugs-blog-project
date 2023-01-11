@@ -12,27 +12,15 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const posts_json_1 = __importDefault(require("../utils/posts.json"));
+const comments_json_1 = __importDefault(require("../utils/comments.json"));
 /**
- * Get function for list blogs
+ * Get function for list comments
  */
 function list(req, res, next) {
     return __awaiter(this, void 0, void 0, function* () {
-        res.json({ data: posts_json_1.default });
+        res.json({ data: comments_json_1.default });
     });
 }
-;
-function create(req, res, next) {
-    return __awaiter(this, void 0, void 0, function* () {
-        const now = new Date();
-        const newPost = Object.assign(Object.assign({}, req.body.data), { id: posts_json_1.default.length + 1, created: now, updated: now });
-        posts_json_1.default.push(newPost);
-        console.log(newPost);
-        res.status(201).json({ data: newPost });
-    });
-}
-;
 module.exports = {
     list: list,
-    create: create,
 };
