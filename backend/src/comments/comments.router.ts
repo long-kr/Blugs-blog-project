@@ -4,10 +4,15 @@ import { Router } from "express";
  *
  * @type {Router}
  */
-const router: Router = require('express').Router({ mergeParams: true });
-const controller: { list: () => void } = require('./comments.controller');
 
-router.route("/")
-    .get(controller.list);
+type ControllerProps = {
+  list: () => void;
+  create: () => void;
+};
+
+const router: Router = require("express").Router({ mergeParams: true });
+const controller: ControllerProps = require("./comments.controller");
+
+router.route("/").get(controller.list).post(controller.create);
 
 module.exports = router;
