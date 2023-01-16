@@ -1,0 +1,33 @@
+.nav--bar {
+    position: fixed;
+    width: 100%;
+    padding: 0.3rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: white;
+    z-index: 1;
+}
+
+.header-box {
+    background-color: rgb(230, 40, 65);
+    padding-top: 4rem;
+    color: azure;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    height: 10rem;
+    box-shadow: 0.2rem;
+}
+
+.article-box {
+    padding: 1rem;
+}
+
+.footer-box {
+    background-color: rgb(230, 40, 65);
+    color: azure;
+    font-size: 0.8rem;
+    height: 3rem;
+    text-align: center;
+}
