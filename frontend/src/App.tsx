@@ -44,7 +44,6 @@ function App() {
 			<BrowserRouter>
 				<Navbar />
 				<Header />
-				<p>test</p>
 				<main className="article-box">
 					{!isLoading ? (
 						<article>
