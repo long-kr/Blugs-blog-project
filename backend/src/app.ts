@@ -5,19 +5,20 @@ require("dotenv").config();
 
 const blogsRouter = require("./blogs/blogs.router");
 const commentsRouter = require("./comments/comments.router");
-const notFound = require("./errors/pageNotFound");
+const notFound = require("./errors/notFound");
 const errorsHandler = require("./errors/errorsHandler");
 
 const app: Express = express();
-const version: string = "/api/v1";
+const version: string = "api/v1";
 
 app.use(cors());
 app.use(morgan("dev"));
 app.use(express.json());
 
-app.use(`${version}/blogs`, blogsRouter);
-app.use(`${version}/comments`, commentsRouter);
+app.use(`/${version}/blogs`, blogsRouter);
+app.use(`/${version}/comments`, commentsRouter);
+
 app.use(notFound);
-// app.use(errorsHandler);
+app.use(errorsHandler);
 
 module.exports = app;
