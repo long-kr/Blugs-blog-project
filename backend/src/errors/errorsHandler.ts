@@ -4,6 +4,9 @@ interface ResponseError extends Error {
 	status?: number;
 }
 
+/**
+ * Express Page response for errors
+ */
 function errorsHandler(
 	err: ResponseError,
 	req: Request,

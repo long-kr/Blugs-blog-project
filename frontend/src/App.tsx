@@ -6,10 +6,10 @@ import { NotFound, Header, Navbar, Footer, Home } from "./layouts";
 import { Blog, BlogsList, BlogForm } from "./blogs";
 import { listComments, listPosts } from "./utils/api";
 import { MyContext } from "./utils/apiContext";
-import { PostsProps, CommentsProps, MemoProps } from "./utils/type";
+import { BlogsProps, CommentsProps, MemoProps } from "./utils/type";
 
 function App() {
-	const [posts, setPosts] = useState<PostsProps[]>([]);
+	const [posts, setPosts] = useState<BlogsProps[]>([]);
 	const [comments, setComments] = useState<CommentsProps[]>([]);
 	const [isLoading, setIsLoading] = useState<true | boolean>(true);
 

@@ -7,9 +7,9 @@ export const Comments: React.FC<{ comments: CommentsProps[] }> = ({
 	const list = comments?.map((comment) => (
 		<div key={comment.id}>
 			<p>Name: {comment.name}</p>
-			<p>PostId: {comment.postId}</p>
+			<p>PostId: {comment.blog_id}</p>
 			<p>Email: {comment.email}</p>
-			<p>Body: {comment.body}</p>
+			<p>Body: {comment.content}</p>
 			<hr></hr>
 		</div>
 	));
