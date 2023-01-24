@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "npx tsx",
     "start": "node api/server.js",
-    "dev": "nodemon api/server.js"
+    "dev": "nodemon -L api/server.js"
   },
   "keywords": [],
   "author": "",

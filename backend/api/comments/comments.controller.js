@@ -21,6 +21,15 @@ function list(req, res, next) {
         res.json({ data: comments_json_1.default });
     });
 }
+function create(req, res, next) {
+    return __awaiter(this, void 0, void 0, function* () {
+        const now = new Date();
+        const newComment = Object.assign(Object.assign({}, req.body.data), { id: comments_json_1.default.length + 1, createdAt: now, updatedAt: now });
+        comments_json_1.default.push(newComment);
+        res.status(201).json(newComment);
+    });
+}
 module.exports = {
     list: list,
+    create: create,
 };

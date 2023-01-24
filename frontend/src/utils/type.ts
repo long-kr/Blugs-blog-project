@@ -1,27 +1,33 @@
-export type PostsProps = {
-  userId: string;
-  id: number;
-  title: string;
-  body: string;
-  img?: string;
+export type BlogsProps = {
+	author_id: string;
+	id: number;
+	title: string;
+	content: string;
+	status: "published" | "draft" | null;
+	views: number;
+	img?: string;
 };
 
 export type CommentsProps = {
-  postId: number;
-  id: number;
-  name: string;
-  email: string;
-  body: string;
+	blog_id: number;
+	id: number;
+	author_id: string;
+	name: string;
+	email: string;
+	status: "published" | "draft" | null;
+	ip_address: string;
+	likes: number;
+	content: string;
 };
 
 export type MemoProps = {
-  posts: PostsProps[];
-  comments: CommentsProps[];
+	posts: BlogsProps[];
+	comments: CommentsProps[];
 };
 
 export type PostProps = {
-  userId?: string;
-  title?: string;
-  body?: string;
-  img?: string;
+	userId?: string;
+	title?: string;
+	body?: string;
+	img?: string;
 };
