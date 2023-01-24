@@ -3,13 +3,13 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { useState, useEffect, useMemo } from "react";
 import { BrowserRouter, Routes as Switch, Route } from "react-router-dom";
 import { NotFound, Header, Navbar, Footer, Home } from "./layouts";
-import { BlogHomePage } from "./blogs/BlogHome";
 import { listComments, listBlogs } from "./utils/api";
 import { MyContext } from "./utils/apiContext";
-import { BlogsProps, CommentsProps, MemoProps } from "./utils/type";
+import { BlogProps, CommentsProps, MemoProps } from "./utils/type";
+import { CreateBlogPage, ListBlogPage, BlogPage } from "./blogs";
 
 function App() {
-	const [blogs, setBlogs] = useState<BlogsProps[]>([]);
+	const [blogs, setBlogs] = useState<BlogProps[]>([]);
 	const [comments, setComments] = useState<CommentsProps[]>([]);
 	const [isLoading, setIsLoading] = useState<true | boolean>(true);
 
@@ -50,9 +50,9 @@ function App() {
 							<MyContext.Provider value={providerValues}>
 								<Switch>
 									<Route path="/" element={<Home />} />
-									<Route path="/blogs" element={<BlogHomePage />} />
-									<Route path="/blogs/:id" element={<Blog />} />
-									<Route path="/blogs/create" element={<BlogForm />} />
+									<Route path="/blogs" element={<ListBlogPage />} />
+									<Route path="/blogs/:id" element={<BlogPage />} />
+									<Route path="/blogs/create" element={<CreateBlogPage />} />
 									<Route path="*" element={<NotFound />} />
 								</Switch>
 							</MyContext.Provider>

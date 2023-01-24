@@ -1,50 +1,17 @@
 import React from "react";
-import { Button, Form } from "react-bootstrap";
-import { useNavigate } from "react-router-dom";
-import { ErrorAlert } from "../../layouts";
-import { createPost } from "../../utils/api";
-import { PostProps } from "../../utils/type";
+import Button from "react-bootstrap/Button";
+import Form from "react-bootstrap/Form";
+import { BlogProps } from "../../utils/type";
 
-const BlogForm: React.FC = () => {
-	const postInit: PostProps = {
-		userId: "",
-		title: "",
-		body: "",
-		img: "",
-	};
+interface Props {
+	change: (e: React.ChangeEvent<HTMLInputElement>) => void;
+	submit: (e: React.SyntheticEvent) => void;
+	blog: BlogProps;
+}
 
-	const [post, setPost] = React.useState<PostProps>({ ...postInit });
-
-	const [error, setError] = React.useState<any>(null);
-
-	const navigate = useNavigate();
-
-	const submitHandler = (e: React.SyntheticEvent) => {
-		e.preventDefault();
-		setError(null);
-		createPost(post)
-			.then((data) => {
-				console.log(data);
-				navigate("/");
-			})
-			.catch(setError);
-	};
-
-	const changeHandler: React.ChangeEventHandler<HTMLInputElement> = (e) => {
-		const target = e.target as typeof e.target;
-
-		setPost((pre) => ({
-			...pre,
-			[target.name]: target.value,
-		}));
-	};
-
+export const BlogForm: React.FC<Props> = ({ change, submit, blog }) => {
 	return (
 		<div>
-			<div>
-				<h2>Create Blog</h2>
-			</div>
-			<ErrorAlert error={error} />
 			<Form>
 				<Form.Group className="mb-3" controlId="title">
 					<Form.Label>Title</Form.Label>
@@ -52,8 +19,8 @@ const BlogForm: React.FC = () => {
 						type="text"
 						placeholder="bug name"
 						name="title"
-						value={post.title}
-						onChange={changeHandler}
+						value={blog.title}
+						onChange={change}
 					/>
 				</Form.Group>
 				<Form.Group className="mb-3" controlId="body">
@@ -63,8 +30,8 @@ const BlogForm: React.FC = () => {
 						rows={3}
 						placeholder="resolve"
 						name="body"
-						value={post.body}
-						onChange={changeHandler}
+						value={blog.content}
+						onChange={change}
 					/>
 				</Form.Group>
 				<Form.Group className="mb-3" controlId="body">
@@ -73,8 +40,8 @@ const BlogForm: React.FC = () => {
 						type="text"
 						placeholder="resolve"
 						name="userId"
-						value={post.userId}
-						onChange={changeHandler}
+						value={blog.author_id}
+						onChange={change}
 					/>
 				</Form.Group>
 				<Form.Group className="mb-3" controlId="title">
@@ -83,17 +50,15 @@ const BlogForm: React.FC = () => {
 						type="text"
 						placeholder="bug name"
 						name="img"
-						value={post.img}
-						onChange={changeHandler}
+						value={blog.img}
+						onChange={change}
 					/>
 				</Form.Group>
 
-				<Button onClick={submitHandler} variant="primary" type="submit">
+				<Button onClick={submit} variant="primary" type="submit">
 					Submit
 				</Button>
 			</Form>
 		</div>
 	);
 };
-
-export default BlogForm;

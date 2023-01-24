@@ -1,23 +1,34 @@
 import React, { useContext } from "react";
 import { MyContext } from "../utils/apiContext";
+import { Loading } from "./Loading";
 
 export const Home: React.FC = () => {
-	// .slice(0, 20)
 	const appContext = useContext(MyContext);
-	const posts = appContext?.posts;
+	const blogs = appContext?.blogs;
 
-	if (!posts) {
-		return <h3>Loading...</h3>;
+	if (!blogs) {
+		return <Loading />;
 	}
-	const list = posts.map((post) => (
-		<div key={post.id} className="Blog-View">
-			<p>Post ID: {post.id}</p>
-			<p>Title: {post.title}</p>
-			<p>{post.content}</p>
-			{post.img ? <img src={post.img} alt="post img" /> : null}
-			<hr></hr>
-		</div>
-	));
 
-	return <React.Fragment>{list}</React.Fragment>;
+	const newArrBlogs = [...blogs];
+
+	const list = newArrBlogs
+		.sort((blogA, blogB) => blogB.views - blogA.views)
+		.slice(0, 20)
+		.map((blog) => (
+			<div key={blog.id} className="Blog-View">
+				<p>Post ID: {blog.id}</p>
+				<p>Title: {blog.title}</p>
+				<p>Views: {blog.views}</p>
+				<p>{blog.content.slice(0, 50)}</p>
+				<hr></hr>
+			</div>
+		));
+
+	return (
+		<React.Fragment>
+			<h3>Top Views Blog</h3>
+			<div>{list}</div>
+		</React.Fragment>
+	);
 };
