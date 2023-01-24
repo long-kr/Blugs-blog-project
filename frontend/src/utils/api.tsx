@@ -1,4 +1,4 @@
-import { PostProps } from "./type";
+import { BlogProps } from "./type";
 
 const API_BASE_URL = process.env.API_BASE_URL || "http://localhost:5001/api/v1";
 
@@ -68,7 +68,7 @@ export async function listComments(signal: AbortSignal) {
 	return await fetchJson(url, options, []);
 }
 
-export async function createPost(post: PostProps) {
+export async function createPost(post: BlogProps) {
 	const url = `${API_BASE_URL}/blogs`;
 	const options = {
 		method: "POST",

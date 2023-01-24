@@ -1,10 +1,10 @@
 import React, { useContext } from "react";
 import { useParams } from "react-router-dom";
-import { Comments } from "../../comments/Comments";
-import { Loading } from "../../layouts";
-import { MyContext } from "../../utils/apiContext";
+import { Comments } from "../comments/Comments";
+import { Loading } from "../layouts";
+import { MyContext } from "../utils/apiContext";
 
-export const Blog: React.FC = () => {
+export const BlogPage: React.FC = () => {
 	const { id } = useParams();
 	const appContext = useContext(MyContext);
 

@@ -5,8 +5,8 @@ export const Navbar = (props: Props) => {
 	return (
 		<div className="nav--bar">
 			<Link to="/">Home</Link>
-			<Link to="posts">Blogs</Link>
-			<Link to="posts/create">Write a Bug Blog</Link>
+			<Link to="blogs">Blogs</Link>
+			<Link to="blogs/create">Write a Bug Blog</Link>
 			<div>Search</div>
 		</div>
 	);

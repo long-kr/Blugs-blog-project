@@ -1,10 +1,18 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import Button from "react-bootstrap/Button";
-import { BlogsProps } from "../../utils/type";
+import { MyContext } from "../utils";
+import { Loading } from "../layouts";
 
-export const BlogsList: React.FC<{ blogs: BlogsProps[] }> = ({ blogs }) => {
+export const ListBlogPage: React.FC = () => {
+	const appContext = useContext(MyContext);
+	const blogs = appContext?.blogs;
+
 	const [page, setPage] = useState<number>(10);
+
+	if (!blogs) {
+		return <Loading />;
+	}
 
 	const handleBackButton = () => {
 		if (page <= 19) {
@@ -30,9 +38,10 @@ export const BlogsList: React.FC<{ blogs: BlogsProps[] }> = ({ blogs }) => {
 
 	const list = blogs.slice(page - 10, page).map((blog) => (
 		<div key={blog.id}>
-			<Link to={`/posts/${blog.id}`}>Title: {blog.title.slice(1, 20)}</Link>
+			<Link to={`/blogs/${blog.id}`}>Title: {blog.title}</Link>
 			<br />
 			<p>ID: {blog.id}</p>
+			<div>Views: {blog.views}</div>
 		</div>
 	));
 

@@ -1,6 +1,6 @@
-export type BlogsProps = {
-	author_id: string;
-	id: number;
+export type BlogProps = {
+	author_id: number;
+	id?: number;
 	title: string;
 	content: string;
 	status: "published" | "draft" | null;
@@ -21,13 +21,6 @@ export type CommentsProps = {
 };
 
 export type MemoProps = {
-	blogs: BlogsProps[];
+	blogs: BlogProps[];
 	comments: CommentsProps[];
-};
-
-export type PostProps = {
-	userId?: string;
-	title?: string;
-	body?: string;
-	img?: string;
 };
