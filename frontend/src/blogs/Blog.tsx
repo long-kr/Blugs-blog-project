@@ -14,16 +14,16 @@ export const Blog: React.FC = () => {
 
 	const post = appContext?.posts?.find((post) => post.id === Number(id));
 	const postComments = appContext?.comments?.filter(
-		(cm) => cm.postId === Number(id)
+		(cm) => cm.blog_id === Number(id)
 	);
 
 	return (
 		<React.Fragment>
 			<div className="Blog-View">
 				<h3>Title: {post?.title}</h3>
-				<p>User: {post?.userId}</p>
+				<p>User: {post?.author_id}</p>
 				<p>ID: {post?.id}</p>
-				<p>Body: {post?.body}</p>
+				<p>Body: {post?.content}</p>
 				<h4>Comments</h4>
 			</div>
 			<Comments comments={postComments} />
