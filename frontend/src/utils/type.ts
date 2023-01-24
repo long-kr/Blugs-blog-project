@@ -21,7 +21,7 @@ export type CommentsProps = {
 };
 
 export type MemoProps = {
-	posts: BlogsProps[];
+	blogs: BlogsProps[];
 	comments: CommentsProps[];
 };
 
