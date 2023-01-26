@@ -11,7 +11,6 @@ export const Home: React.FC = () => {
 	}
 
 	const newArrBlogs = [...blogs];
-
 	const list = newArrBlogs
 		.sort((blogA, blogB) => blogB.views - blogA.views)
 		.slice(0, 20)
