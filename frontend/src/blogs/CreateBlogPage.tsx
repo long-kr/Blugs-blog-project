@@ -11,14 +11,14 @@ export const CreateBlogPage: React.FC = () => {
 		content: "",
 		status: "draft",
 		views: 0,
+		img: "",
 	};
 
+	const navigate = useNavigate();
 	const [blog, setBlog] = React.useState<BlogProps>({ ...blogInit });
 	const [error, setError] = React.useState<any>(null);
 
-	const navigate = useNavigate();
-
-	const submitHandler = (e: React.SyntheticEvent) => {
+	const submitHandler = (e: React.MouseEvent<HTMLButtonElement>) => {
 		e.preventDefault();
 		setError(null);
 		createPost(blog)

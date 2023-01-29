@@ -1,5 +1,5 @@
 import React from "react";
-import { PrimaryButton } from "../../components/Buttons";
+import { PrimaryButton } from "../../components";
 import { BlogProps } from "../../utils";
 import { Loading } from "../../layouts";
 import Dropdown from "react-bootstrap/Dropdown";
@@ -11,7 +11,12 @@ interface Props {
 	setPage: React.Dispatch<React.SetStateAction<number>>;
 }
 
-export const ButtonsForList = ({ blogs, setBlogs, page, setPage }: Props) => {
+export const ButtonsForList: React.FC<Props> = ({
+	blogs,
+	setBlogs,
+	page,
+	setPage,
+}) => {
 	if (!blogs) {
 		return <Loading />;
 	}
@@ -19,24 +24,24 @@ export const ButtonsForList = ({ blogs, setBlogs, page, setPage }: Props) => {
 	//Page buttons
 	const handleBackButton = () => {
 		if (page <= 19) {
-			return setPage((page) => (page = 10));
+			return setPage((prev) => (prev = 10));
 		}
 		setPage((page) => page - 10);
 	};
 
 	const handleNextButton = () => {
 		if (page > blogs.length - 10) {
-			return setPage((page) => (page = blogs.length));
+			return setPage((prev) => (prev = blogs.length));
 		}
-		setPage((page) => page + 10);
+		setPage((prev) => prev + 10);
 	};
 
 	const handleEndButton = () => {
-		setPage((page) => (page = blogs.length));
+		setPage((prev) => (prev = blogs.length));
 	};
 
 	const handleHomeButton = () => {
-		setPage((page) => (page = 10));
+		setPage((prev) => (prev = 10));
 	};
 
 	//Sort Dropdown

@@ -4,7 +4,7 @@ import Button from "react-bootstrap/Button";
 interface Props {
 	children?: React.ReactNode;
 	href?: string | "";
-	onClick?: () => void;
+	onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
 	type: "submit" | "button" | "reset" | undefined;
 }
 
