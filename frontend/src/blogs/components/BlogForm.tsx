@@ -6,10 +6,16 @@ import { BlogProps } from "../../utils/type";
 interface Props {
 	change: (e: React.ChangeEvent<HTMLInputElement>) => void;
 	submit: (e: React.MouseEvent<HTMLButtonElement>) => void;
+	fileChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
 	blog: BlogProps;
 }
 
-export const BlogForm: React.FC<Props> = ({ change, submit, blog }) => {
+export const BlogForm: React.FC<Props> = ({
+	fileChange,
+	change,
+	submit,
+	blog,
+}) => {
 	return (
 		<div>
 			<Form>

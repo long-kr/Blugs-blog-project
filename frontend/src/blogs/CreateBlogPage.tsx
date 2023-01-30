@@ -38,13 +38,29 @@ export const CreateBlogPage: React.FC = () => {
 		}));
 	};
 
+	const fileChangeHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
+		const file = event.target.files![0];
+		const reader = new FileReader();
+		reader.readAsDataURL(file);
+		reader.onloadend = () => {
+			setBlog((prev) => ({
+				...prev,
+				img: reader.result as string,
+			}));
+		};
+	};
 	return (
 		<div>
 			<div>
 				<h2>Create Blog</h2>
 			</div>
 			<ErrorAlert error={error} />
-			<BlogForm change={changeHandler} submit={submitHandler} blog={blog} />
+			<BlogForm
+				fileChange={fileChangeHandler}
+				change={changeHandler}
+				submit={submitHandler}
+				blog={blog}
+			/>
 		</div>
 	);
 };
