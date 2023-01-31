@@ -10,7 +10,12 @@ const notFound = require("./errors/notFound");
 const errorsHandler = require("./errors/errorsHandler");
 
 const app: Express = express();
+const bodyParser = require("body-parser");
 const version: string = "api/v1";
+
+// Set the maximum request body size limit
+app.use(bodyParser.json({ limit: "10mb" }));
+app.use(bodyParser.urlencoded({ limit: "10mb", extended: true }));
 
 app.use(cors());
 app.use(morgan("dev"));

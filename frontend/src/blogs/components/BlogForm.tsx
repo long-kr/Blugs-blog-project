@@ -46,8 +46,8 @@ export const BlogForm: React.FC<Props> = ({
 						type="file"
 						placeholder="picture"
 						name="img"
-						value={blog.img}
-						onChange={change}
+						accept="image/*"
+						onChange={fileChange}
 					/>
 				</Form.Group>
 

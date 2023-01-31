@@ -26,7 +26,10 @@ function App() {
 		const abortController = new AbortController();
 
 		listBlogs(abortController.signal)
-			.then((data) => setBlogs(data))
+			.then((data) => {
+				setBlogs(data);
+				setIsLoading(false);
+			})
 			.catch((err) => console.log(err));
 
 		listComments(abortController.signal)
@@ -38,6 +41,13 @@ function App() {
 
 		return () => abortController.abort();
 	}
+
+	// This function can be called from another component to update the list of blogs
+	const refreshBlogs = () => {
+		fetch("https://my-api.com/blogs")
+			.then((res) => res.json())
+			.then((data) => setBlogs(data));
+	};
 
 	return (
 		<div className="App">
@@ -52,7 +62,10 @@ function App() {
 									<Route path="/" element={<Home />} />
 									<Route path="/blogs" element={<ListBlogPage />} />
 									<Route path="/blogs/:id" element={<BlogPage />} />
-									<Route path="/blogs/create" element={<CreateBlogPage />} />
+									<Route
+										path="/blogs/create"
+										element={<CreateBlogPage refreshBlogs={refreshBlogs} />}
+									/>
 									<Route path="*" element={<NotFound />} />
 								</Switch>
 							</MyContext.Provider>
