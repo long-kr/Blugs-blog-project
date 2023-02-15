@@ -1,3 +1,3 @@
 export * from "./BlogPage";
 export * from "./CreateBlogPage";
-export * from "./ListBlogPage";
+export * from "./BlogsPage";
