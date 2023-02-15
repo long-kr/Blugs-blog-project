@@ -6,7 +6,7 @@ import { NotFound, Header, Navbar, Footer, Home } from "./layouts";
 import { listComments, listBlogs } from "./utils/api";
 import { MyContext } from "./utils/apiContext";
 import { BlogProps, CommentsProps, MemoProps } from "./utils/type";
-import { CreateBlogPage, ListBlogPage, BlogPage } from "./blogs";
+import { BlogPage, BlogsPage, CreateBlogPage } from "./blogs";
 
 function App() {
 	const [blogs, setBlogs] = useState<BlogProps[]>([]);
@@ -60,7 +60,7 @@ function App() {
 							<MyContext.Provider value={providerValues}>
 								<Switch>
 									<Route path="/" element={<Home />} />
-									<Route path="/blogs" element={<ListBlogPage />} />
+									<Route path="/blogs" element={<BlogsPage />} />
 									<Route path="/blogs/:id" element={<BlogPage />} />
 									<Route
 										path="/blogs/create"

@@ -19,7 +19,7 @@ export const BlogPage: React.FC = () => {
 
 	return (
 		<React.Fragment>
-			<div className="Blog-View">
+			<div className='Blog-View'>
 				<h3>Title: {blog?.title}</h3>
 				<p>User: {blog?.author_id}</p>
 				<p>ID: {blog?.id}</p>

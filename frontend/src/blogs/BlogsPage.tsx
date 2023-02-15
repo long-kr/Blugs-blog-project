@@ -3,7 +3,7 @@ import { BlogProps, MyContext } from "../utils";
 import { Loading } from "../layouts";
 import { BlogViewForList, ButtonsForList } from "./components";
 
-export const ListBlogPage: React.FC = () => {
+export const BlogsPage: React.FC = () => {
 	const appContext = useContext(MyContext);
 	const blogs = appContext?.blogs;
 
