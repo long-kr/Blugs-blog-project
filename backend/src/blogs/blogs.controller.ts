@@ -84,9 +84,10 @@ module.exports = {
 	list: list,
 	read: [blogExist, read],
 	create: [
-		bodyDataHas("userId"),
+		bodyDataHas("author_id"),
 		bodyDataHas("title"),
-		bodyDataHas("body"),
+		bodyDataHas("content"),
+		bodyDataHas("status"),
 		create,
 	],
 };
