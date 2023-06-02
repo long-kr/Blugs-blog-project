@@ -6,7 +6,7 @@
     "moduleResolution": "node",
     "sourceMap": true,
     "outDir": "./api",
-    "rootDir": "./src",
+    // "rootDir": "./src",
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,

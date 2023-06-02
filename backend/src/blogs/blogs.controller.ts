@@ -6,6 +6,8 @@ import posts from '../utils/posts.json';
  */
 async function list(req: Request, res: Response, next: NextFunction) {
   console.log(posts);
+  require('dotenv').config();
+  console.log(require('dotenv').config());
   res.json({ data: posts });
 }
 
