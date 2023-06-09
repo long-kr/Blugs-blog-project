@@ -1,0 +1,11 @@
+[
+    {
+        "user_id": "4694787181",
+        "user_name": "Long Huynh",
+        "user_email": "long7093@gmail.com",
+        "user_password": "123456",
+        "user_status": "active",
+        "created_at": "2022-01-01T09:00:00Z",
+        "updated_at": "2022-01-01T09:00:00Z"
+    }
+]

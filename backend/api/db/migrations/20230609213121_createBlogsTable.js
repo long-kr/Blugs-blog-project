@@ -1,6 +1,17 @@
 /**
  * @param { import("knex").Knex } knex
  * @returns { Promise<void> }
+ */
+exports.up = function (knex) {};
+
+/**
+ * @param { import("knex").Knex } knex
+ * @returns { Promise<void> }
+ */
+exports.down = function (knex) {};
+/**
+ * @param { import("knex").Knex } knex
+ * @returns { Promise<void> }
  * blog_status {0: draft, 1: published}
  * blog_tag {language}
  */

@@ -11,7 +11,10 @@ module.exports = {
         client: 'postgresql',
         connection: DATABASE_URL_DEVELOPMENT,
         migrations: {
-            directory: path.join(__dirname, 'src', 'db', 'migrations')
+            directory: path.join(__dirname, 'api', 'db', 'migrations')
+        },
+        seeds: {
+            directory: path.join(__dirname, 'api', 'db', 'seeds')
         }
     }
 
