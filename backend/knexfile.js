@@ -14,7 +14,7 @@ module.exports = {
             directory: path.join(__dirname, 'api', 'db', 'migrations')
         },
         seeds: {
-            directory: path.join(__dirname, 'api', 'db', 'seeds')
+            directory: path.join(__dirname, 'api', 'db', 'seeds', 'dev')
         }
     }
 
