@@ -6,6 +6,7 @@ exports.up = function (knex) {
     return knex.schema.createTable('comments', table => {
         table.increments('comment_id').primary();
         table.string('comment_content').notNullable();
+        table.integer('comment_status').notNullable().defaultTo(1).unsigned();
         table.integer('user_id').unsigned().notNullable();
         table
             .foreign('user_id')
