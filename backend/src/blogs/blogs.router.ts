@@ -1,16 +1,17 @@
 import { Router } from 'express';
 require('dotenv').config();
-console.log(require('dotenv').config());
+
 /**
  * Defines the router for blogs resources.
- *
+ * @route api/blogs
+ * @access private
  * @type {Router}
  */
 
 type ControllerProp = {
-  list: () => void;
-  create: () => void;
-  read: () => void;
+    list: () => void;
+    create: () => void;
+    read: () => void;
 };
 
 const router: Router = require('express').Router({ mergeParams: true });
