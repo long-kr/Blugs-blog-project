@@ -1,23 +1,26 @@
 {
-  "name": "bugs-blog",
-  "version": "1.0.0",
-  "description": "a blog to save bugs that I encouter",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start:dev": "npx concurrently \"npm run server:dev --prefix ./backend\" \"npm start --prefix ./frontend\" "
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/kuzjt93/Blugs-blog-project.git"
-  },
-  "author": "Long Huynh",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/kuzjt93/Blugs-blog-project/issues"
-  },
-  "homepage": "https://github.com/kuzjt93/Blugs-blog-project#readme",
-  "dependencies": {
-    "concurrently": "^8.0.1"
-  }
+    "name": "bugs-blog",
+    "version": "1.0.0",
+    "description": "a blog to save bugs that I encouter",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start:dev": "npx concurrently \"npm run server:dev --prefix ./backend\" \"npm start --prefix ./frontend\" "
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/kuzjt93/Blugs-blog-project.git"
+    },
+    "author": "Long Huynh",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/kuzjt93/Blugs-blog-project/issues"
+    },
+    "homepage": "https://github.com/kuzjt93/Blugs-blog-project#readme",
+    "dependencies": {
+        "concurrently": "^8.0.1"
+    },
+    "devDependencies": {
+        "prettier": "3.0.3"
+    }
 }

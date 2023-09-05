@@ -7,7 +7,6 @@ module.exports = {
   extends: [
     'standard-with-typescript',
     'eslint:recommended',
-    'plugin:react/recommended',
     'plugin:prettier/recommended'
   ],
   overrides: [
@@ -24,5 +23,8 @@ module.exports = {
   parserOptions: {
     ecmaVersion: 'latest'
   },
-  rules: {}
+  rules: {
+    semi: ['error', 'always'],
+    'prettier/prettier': ['error', { endOfLine: 'auto' }]
+  }
 };

@@ -1,24 +1,22 @@
 {
-  "compilerOptions": {
-    "allowJs": true,
-    "target": "es6",
-    "module": "commonjs",
-    "moduleResolution": "node",
-    "sourceMap": true,
-    "outDir": "./api",
-    // "rootDir": "./src",
-    "strict": true,
-    "esModuleInterop": true,
-    "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true,
-    "strictNullChecks": false,
-    "resolveJsonModule": true,
-    "experimentalDecorators": true,
-    "emitDecoratorMetadata": true,
-    "types": ["node"]
-  },
-  // "exclude": ["node_modules"],
-  "include": [
-    "src/**/*.ts"
-  ]
+    "compilerOptions": {
+        "allowJs": true,
+        "target": "es6",
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "sourceMap": true,
+        // "outDir": "./api",
+        // "rootDir": "./src",
+        "strict": true,
+        "esModuleInterop": true,
+        "skipLibCheck": true,
+        "forceConsistentCasingInFileNames": true,
+        "strictNullChecks": false,
+        "resolveJsonModule": true,
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "types": ["node"]
+    },
+    // "exclude": ["node_modules"],
+    "include": ["src/**/*"]
 }

@@ -1,4 +1,4 @@
-import { Router } from "express";
+import { Router } from 'express';
 /**
  * Defines the router for comments resources.
  *
@@ -6,13 +6,13 @@ import { Router } from "express";
  */
 
 type ControllerProps = {
-  list: () => void;
-  create: () => void;
+    list: () => void;
+    create: () => void;
 };
 
-const router: Router = require("express").Router({ mergeParams: true });
-const controller: ControllerProps = require("./comments.controller");
+const router: Router = require('express').Router({ mergeParams: true });
+const controller: ControllerProps = require('./comments.controller');
 
-router.route("/").get(controller.list).post(controller.create);
+router.route('/').get(controller.list).post(controller.create);
 
 module.exports = router;

@@ -1,128 +1,128 @@
 [
-  {
-    "user_id": "5678",
-    "blog_id": 1,
-    "blog_title": "An introduction to React",
-    "blog_content": "React is a popular JavaScript library for building user interfaces. In this blog post, we will discuss the basics of React and how it can be used to create dynamic and interactive web applications.",
-    "blog_status": "published",
-    "blog_view_number": 1000,
-    "img": "react.jpg"
-  },
-  {
-    "user_id": "1234",
-    "blog_id": 2,
-    "blog_title": "How to debug JavaScript like a pro",
-    "blog_content": "Debugging can be a tricky process, but with the right tools and techniques, it doesn't have to be. In this blog post, we will explore some of the best practices for debugging JavaScript code.",
-    "blog_status": "published",
-    "blog_view_number": 800,
-    "img": "debugging.jpg"
-  },
-  {
-    "user_id": "9101",
-    "blog_id": 3,
-    "blog_title": "The basics of Git and version control",
-    "blog_content": "Git is a powerful tool for managing code and collaborating with other developers. In this blog post, we will discuss the basics of Git and how it can be used to effectively manage code changes and collaborate with others.",
-    "blog_status": "published",
-    "blog_view_number": 600,
-    "img": "git.jpg"
-  },
-  {
-    "user_id": "1234",
-    "blog_id": 4,
-    "blog_title": "Creating a RESTful API with Node.js and Express",
-    "blog_content": "Node.js and Express are popular tools for building web applications. In this blog post, we will discuss how to create a RESTful API using Node.js and Express.",
-    "blog_status": "published",
-    "blog_view_number": 500,
-    "img": "nodejs.jpg"
-  },
-  {
-    "user_id": "5678",
-    "blog_id": 5,
-    "blog_title": "How to optimize website performance",
-    "blog_content": "Website performance is an important aspect of the user experience. In this blog post, we will explore some of the best practices for optimizing website performance and improving the user experience.",
-    "blog_status": "published",
-    "blog_view_number": 400,
-    "img": "performance.jpg"
-  },
-  {
-    "user_id": "5678",
-    "blog_id": 6,
-    "blog_title": "An introduction to Machine Learning",
-    "blog_content": "Machine learning is a subfield of Artificial Intelligence which enables systems to learn from data and improve from experience without being explicitly programmed. In this blog post, we will discuss the basics of Machine Learning and its applications",
-    "blog_status": "published",
-    "blog_view_number": 900,
-    "img": "ml.jpg"
-  },
-  {
-    "user_id": "1234",
-    "blog_id": 7,
-    "blog_title": "How to use TypeScript in Angular",
-    "blog_content": "TypeScript is a typed superset of JavaScript that compiles to plain JavaScript. In this blog post, we will explore how to use TypeScript in Angular, a popular JavaScript framework for building web applications.",
-    "blog_status": "published",
-    "blog_view_number": 700,
-    "img": "typescript.jpg"
-  },
-  {
-    "user_id": "9101",
-    "blog_id": 8,
-    "blog_title": "Building a Progressive Web App",
-    "blog_content": "Progressive Web Apps (PWAs) are web applications that can be installed on a user's device and work offline. In this blog post, we will discuss the basics of building a Progressive Web App, and its advantages over traditional web apps and native apps.",
-    "blog_status": "published",
-    "blog_view_number": 600,
-    "img": "pwa.jpg"
-  },
-  {
-    "user_id": "1234",
-    "blog_id": 9,
-    "blog_title": "How to use GraphQL in your app",
-    "blog_content": "GraphQL is a query language for APIs that allows client to define the structure of the data required and the server will return only the requested data. In this blog post, we will discuss the basics of GraphQL and how to use it in your app",
-    "blog_status": "published",
-    "blog_view_number": 500,
-    "img": "graphql.jpg"
-  },
-  {
-    "user_id": "5678",
-    "blog_id": 11,
-    "blog_title": "Building a Secure Login System",
-    "blog_content": "Security is an essential aspect when building web applications. In this blog post, we will discuss the best practices for building a secure login system, including password hashing, salting, and encryption.",
-    "blog_status": "published",
-    "blog_view_number": 800,
-    "img": "security.jpg"
-  },
-  {
-    "user_id": "1234",
-    "blog_id": 12,
-    "blog_title": "Creating a CRUD application using MongoDB",
-    "blog_content": "MongoDB is a popular NoSQL database that allows for easy scalability and high performance. In this blog post, we will discuss how to create a CRUD application using MongoDB.",
-    "blog_status": "published",
-    "blog_view_number": 700,
-    "img": "mongodb.jpg"
-  },
-  {
-    "user_id": "9101",
-    "blog_id": 13,
-    "blog_title": "Understanding the differences between REST and GraphQL",
-    "blog_content": "REST and GraphQL are two popular approaches for building web APIs. In this blog post, we will discuss the differences between the two and when to use each.",
-    "blog_status": "published",
-    "blog_view_number": 600,
-    "img": "rest-graphql.jpg"
-  },
-  {
-    "user_id": "5678",
-    "blog_id": 15,
-    "blog_title": "Building a Real-time Web App using Firebase",
-    "blog_content": "Firebase is a popular platform for building real-time web and mobile applications. In this blog post, we will discuss how to use Firebase to create a real-time web app with features such as authentication and real-time data updates.",
-    "blog_status": "published",
-    "blog_view_number": 800,
-    "img": "firebase.jpg"
-  },
-  {
-    "user_id": "1234",
-    "blog_id": 16,
-    "blog_title": "Creating a Progressive Web App using Vue.js",
-    "blog_content": "Vue.js is a popular JavaScript framework for building user interfaces. In this blog post, we will discuss how to use Vue.js to create a Progressive Web App that can be installed on a user's device and work offline.",
-    "blog_status": "published",
-    "blog_view_number": 700,
-    "img": "vue-pwa.jpg"
-  }
+    {
+        "user_id": "5678",
+        "blog_id": 1,
+        "blog_title": "An introduction to React",
+        "blog_content": "React is a popular JavaScript library for building user interfaces. In this blog post, we will discuss the basics of React and how it can be used to create dynamic and interactive web applications.",
+        "blog_status": "published",
+        "blog_view_number": 1000,
+        "img": "react.jpg"
+    },
+    {
+        "user_id": "1234",
+        "blog_id": 2,
+        "blog_title": "How to debug JavaScript like a pro",
+        "blog_content": "Debugging can be a tricky process, but with the right tools and techniques, it doesn't have to be. In this blog post, we will explore some of the best practices for debugging JavaScript code.",
+        "blog_status": "published",
+        "blog_view_number": 800,
+        "img": "debugging.jpg"
+    },
+    {
+        "user_id": "9101",
+        "blog_id": 3,
+        "blog_title": "The basics of Git and version control",
+        "blog_content": "Git is a powerful tool for managing code and collaborating with other developers. In this blog post, we will discuss the basics of Git and how it can be used to effectively manage code changes and collaborate with others.",
+        "blog_status": "published",
+        "blog_view_number": 600,
+        "img": "git.jpg"
+    },
+    {
+        "user_id": "1234",
+        "blog_id": 4,
+        "blog_title": "Creating a RESTful API with Node.js and Express",
+        "blog_content": "Node.js and Express are popular tools for building web applications. In this blog post, we will discuss how to create a RESTful API using Node.js and Express.",
+        "blog_status": "published",
+        "blog_view_number": 500,
+        "img": "nodejs.jpg"
+    },
+    {
+        "user_id": "5678",
+        "blog_id": 5,
+        "blog_title": "How to optimize website performance",
+        "blog_content": "Website performance is an important aspect of the user experience. In this blog post, we will explore some of the best practices for optimizing website performance and improving the user experience.",
+        "blog_status": "published",
+        "blog_view_number": 400,
+        "img": "performance.jpg"
+    },
+    {
+        "user_id": "5678",
+        "blog_id": 6,
+        "blog_title": "An introduction to Machine Learning",
+        "blog_content": "Machine learning is a subfield of Artificial Intelligence which enables systems to learn from data and improve from experience without being explicitly programmed. In this blog post, we will discuss the basics of Machine Learning and its applications",
+        "blog_status": "published",
+        "blog_view_number": 900,
+        "img": "ml.jpg"
+    },
+    {
+        "user_id": "1234",
+        "blog_id": 7,
+        "blog_title": "How to use TypeScript in Angular",
+        "blog_content": "TypeScript is a typed superset of JavaScript that compiles to plain JavaScript. In this blog post, we will explore how to use TypeScript in Angular, a popular JavaScript framework for building web applications.",
+        "blog_status": "published",
+        "blog_view_number": 700,
+        "img": "typescript.jpg"
+    },
+    {
+        "user_id": "9101",
+        "blog_id": 8,
+        "blog_title": "Building a Progressive Web App",
+        "blog_content": "Progressive Web Apps (PWAs) are web applications that can be installed on a user's device and work offline. In this blog post, we will discuss the basics of building a Progressive Web App, and its advantages over traditional web apps and native apps.",
+        "blog_status": "published",
+        "blog_view_number": 600,
+        "img": "pwa.jpg"
+    },
+    {
+        "user_id": "1234",
+        "blog_id": 9,
+        "blog_title": "How to use GraphQL in your app",
+        "blog_content": "GraphQL is a query language for APIs that allows client to define the structure of the data required and the server will return only the requested data. In this blog post, we will discuss the basics of GraphQL and how to use it in your app",
+        "blog_status": "published",
+        "blog_view_number": 500,
+        "img": "graphql.jpg"
+    },
+    {
+        "user_id": "5678",
+        "blog_id": 11,
+        "blog_title": "Building a Secure Login System",
+        "blog_content": "Security is an essential aspect when building web applications. In this blog post, we will discuss the best practices for building a secure login system, including password hashing, salting, and encryption.",
+        "blog_status": "published",
+        "blog_view_number": 800,
+        "img": "security.jpg"
+    },
+    {
+        "user_id": "1234",
+        "blog_id": 12,
+        "blog_title": "Creating a CRUD application using MongoDB",
+        "blog_content": "MongoDB is a popular NoSQL database that allows for easy scalability and high performance. In this blog post, we will discuss how to create a CRUD application using MongoDB.",
+        "blog_status": "published",
+        "blog_view_number": 700,
+        "img": "mongodb.jpg"
+    },
+    {
+        "user_id": "9101",
+        "blog_id": 13,
+        "blog_title": "Understanding the differences between REST and GraphQL",
+        "blog_content": "REST and GraphQL are two popular approaches for building web APIs. In this blog post, we will discuss the differences between the two and when to use each.",
+        "blog_status": "published",
+        "blog_view_number": 600,
+        "img": "rest-graphql.jpg"
+    },
+    {
+        "user_id": "5678",
+        "blog_id": 15,
+        "blog_title": "Building a Real-time Web App using Firebase",
+        "blog_content": "Firebase is a popular platform for building real-time web and mobile applications. In this blog post, we will discuss how to use Firebase to create a real-time web app with features such as authentication and real-time data updates.",
+        "blog_status": "published",
+        "blog_view_number": 800,
+        "img": "firebase.jpg"
+    },
+    {
+        "user_id": "1234",
+        "blog_id": 16,
+        "blog_title": "Creating a Progressive Web App using Vue.js",
+        "blog_content": "Vue.js is a popular JavaScript framework for building user interfaces. In this blog post, we will discuss how to use Vue.js to create a Progressive Web App that can be installed on a user's device and work offline.",
+        "blog_status": "published",
+        "blog_view_number": 700,
+        "img": "vue-pwa.jpg"
+    }
 ]
