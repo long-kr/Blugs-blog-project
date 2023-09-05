@@ -1,5 +1,5 @@
-import React from "react";
+import React from 'react';
 
 export const Loading: React.FC = () => {
-	return <div>Loading....</div>;
+    return <div>Loading....</div>;
 };

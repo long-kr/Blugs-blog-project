@@ -9,75 +9,85 @@ import { BlogProps, CommentsProps, MemoProps } from './utils/type';
 import { BlogPage, BlogsPage, CreateBlogPage } from './blogs';
 
 function App() {
-  const [blogs, setBlogs] = useState<BlogProps[]>([]);
-  const [comments, setComments] = useState<CommentsProps[]>([]);
-  const [isLoading, setIsLoading] = useState<true | boolean>(true);
+    const [blogs, setBlogs] = useState<BlogProps[]>([]);
+    const [comments, setComments] = useState<CommentsProps[]>([]);
+    const [isLoading, setIsLoading] = useState<true | boolean>(true);
 
-  const providerValues = useMemo<MemoProps | null>(
-    () => ({ blogs, comments }),
-    [blogs, comments]
-  );
+    const providerValues = useMemo<MemoProps | null>(
+        () => ({ blogs, comments }),
+        [blogs, comments]
+    );
 
-  useEffect(() => {
-    load();
-  }, []);
+    useEffect(() => {
+        load();
+    }, []);
 
-  function load() {
-    const abortController = new AbortController();
+    function load() {
+        const abortController = new AbortController();
 
-    listBlogs(abortController.signal)
-      .then(data => {
-        setBlogs(data);
-        setIsLoading(false);
-      })
-      .catch(err => console.log(err));
+        listBlogs(abortController.signal)
+            .then(data => {
+                setBlogs(data);
+                setIsLoading(false);
+            })
+            .catch(err => console.log(err));
 
-    listComments(abortController.signal)
-      .then(data => {
-        setComments(data);
-        setIsLoading(false);
-      })
-      .catch(err => console.log(err));
+        listComments(abortController.signal)
+            .then(data => {
+                setComments(data);
+                setIsLoading(false);
+            })
+            .catch(err => console.log(err));
 
-    return () => abortController.abort();
-  }
+        return () => abortController.abort();
+    }
 
-  // This function can be called from another component to update the list of blogs
-  const refreshBlogs = () => {
-    fetch('https://my-api.com/blogs')
-      .then(res => res.json())
-      .then(data => setBlogs(data));
-  };
+    // This function can be called from another component to update the list of blogs
+    const refreshBlogs = () => {
+        fetch('https://my-api.com/blogs')
+            .then(res => res.json())
+            .then(data => setBlogs(data));
+    };
 
-  return (
-    <div className="App">
-      <BrowserRouter>
-        <Navbar />
-        <Header />
-        <main className="article-box">
-          {!isLoading ? (
-            <article>
-              <MyContext.Provider value={providerValues}>
-                <Switch>
-                  <Route path="/" element={<Home />} />
-                  <Route path="/blogs" element={<BlogsPage />} />
-                  <Route path="/blogs/:id" element={<BlogPage />} />
-                  <Route
-                    path="/blogs/create"
-                    element={<CreateBlogPage refreshBlogs={refreshBlogs} />}
-                  />
-                  <Route path="*" element={<NotFound />} />
-                </Switch>
-              </MyContext.Provider>
-            </article>
-          ) : (
-            <h2>Loading</h2>
-          )}
-        </main>
-        <Footer />
-      </BrowserRouter>
-    </div>
-  );
+    return (
+        <div className="App">
+            <BrowserRouter>
+                <Navbar />
+                <Header />
+                <main className="article-box">
+                    {!isLoading ? (
+                        <article>
+                            <MyContext.Provider value={providerValues}>
+                                <Switch>
+                                    <Route path="/" element={<Home />} />
+                                    <Route
+                                        path="/blogs"
+                                        element={<BlogsPage />}
+                                    />
+                                    <Route
+                                        path="/blogs/:id"
+                                        element={<BlogPage />}
+                                    />
+                                    <Route
+                                        path="/blogs/create"
+                                        element={
+                                            <CreateBlogPage
+                                                refreshBlogs={refreshBlogs}
+                                            />
+                                        }
+                                    />
+                                    <Route path="*" element={<NotFound />} />
+                                </Switch>
+                            </MyContext.Provider>
+                        </article>
+                    ) : (
+                        <h2>Loading</h2>
+                    )}
+                </main>
+                <Footer />
+            </BrowserRouter>
+        </div>
+    );
 }
 
 export default App;

@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 /**
  * Defines the "Not Found" page that is displayed for any unmatched route.
@@ -8,9 +8,9 @@ import React from "react";
  * @returns {JSX.Element}
  */
 export const NotFound: React.FC = () => {
-  return (
-    <div>
-      <h2>Not Found</h2>
-    </div>
-  );
+    return (
+        <div>
+            <h2>Not Found</h2>
+        </div>
+    );
 };
