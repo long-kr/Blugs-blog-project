@@ -2,13 +2,13 @@
   "name": "backend",
   "version": "1.0.0",
   "description": "",
-  "main": "api/server.js",
+  "main": "src/server.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "npx tsx",
-    "start": "node api/server.js",
-    "start:dev": "nodemon -L api/server.js",
-    "server:dev": "concurrently \"npm run build -- --watch\" \"nodemon -q api/server.js\"",
+    "start": "node src/server.ts",
+    "start:dev": "nodemon -L src/server.ts",
+    "server:dev": "concurrently \"npm run build -- --watch\" \"nodemon -q src/server.ts\"",
     "watch": "tsc -w"
   },
   "keywords": [],
